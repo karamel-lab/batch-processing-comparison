@@ -59,6 +59,8 @@ For a fair comparison, you can allocate the same amount of memory for Spark driv
 --------------
 Definition file: [teragen.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/teragen.yml)
 
+TeraGen experiment generates the data to be used in TeraSort experiment by executing a hadoop map-reduce job.
+
 ####Configuration changes
 
 * IP to deploy the experiment (***required****)
@@ -83,7 +85,7 @@ attrs:
 
 ###Step 3 : Run TeraSort experiment
 --------------
-TeraSort benchmark for Spark and Flink shoule be run seperately. The public IP address of the master node shoud be configured in ```ips:``` section similarly as for TeraGen experiment
+TeraSort experiment runs the benchmarking algorithm for the performance comparison of the systems. TeraSort benchmark for Spark and Flink shoule be run seperately. The public IP address of the master node shoud be configured in ```ips:``` section similarly as for TeraGen experiment
 
 ####Spark
 
