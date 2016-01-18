@@ -7,7 +7,7 @@ Definition file : [cluster-deployment.yml](https://github.com/karamel-lab/batch-
 
 ####Configurations that you might want to change
 
-EC2 machine type and region:
+* EC2 machine type and region:
 ```
 ec2:
   region: us-west-2
