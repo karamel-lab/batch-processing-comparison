@@ -23,9 +23,11 @@ datanodes:
       type: i2.4xlarge
       price: 0.5
 ```
-Size of a group can be changed with the parameter ```size:``` and ```price: 0.5``` specify using [spot instances](https://aws.amazon.com/ec2/spot/) with a bid of $0.5 per hour. But if you do not need to take the risk of using spot instances, you can remove the line ```price: 0.5``` and Karamel will automatically pick up on-demand instances.
+* Size and bid for spot instances
 
-Memory allocations:
+Using the above configuration, size of a group can be changed with the parameter ```size:``` and ```price: 0.5``` specify using [spot instances](https://aws.amazon.com/ec2/spot/) with a bid of $0.5 per hour. But if you do not need to take the risk of using spot instances, you can remove the line ```price: 0.5``` and Karamel will automatically pick up on-demand instances.
+
+* Memory allocations:
 
 Spark
 ```
