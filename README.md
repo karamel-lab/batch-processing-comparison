@@ -5,6 +5,15 @@ This project includes all the Karamel definition files which are required to do 
 --------------
 Definition file : [cluster-deployment.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/cluster-deployment.yml)
 
+Above definition file will deploy the following clusters.
+
+| Cluster    | Version           |
+| :-------------: |:-------------:| 
+| Spark     | 1.3.1 | 
+| Flink      | 0.9.1      |  
+| Hadoop | 2.4.0      | 
+
+
 ####Configurations that you might want to change
 
 * EC2 machine type and region:
