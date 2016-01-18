@@ -61,7 +61,7 @@ Definition file: [teragen.yml](https://github.com/karamel-lab/batch-processing-c
 
 ####Configuration changes required *
 
-You should add the public IP address of your master node in configuration for ```ips:```
+You should add the public IP address of your master node in [configuration for](https://github.com/karamel-lab/batch-processing-comparison/blob/master/terasort-spark.yml#L20) ```ips:```
 ```
 ips:
       - 54.203.56.51
