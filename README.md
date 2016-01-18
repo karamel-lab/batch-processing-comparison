@@ -5,7 +5,7 @@ This project includes all the Karamel definition files which are required to do 
 --------------
 Definition file : [cluster-deployment.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/cluster-deployment.yml)
 
-###Configurations that you might want to change
+####Configurations that you might want to change
 
 EC2 machine type and region:
 ```
@@ -43,11 +43,12 @@ jobmanager:
 For a fair comparison, you can allocate the same amount of memory for Spark driver_memory and Flink jobmanager. And similarly for Spark executor_memory and Flink taskmanager.
 
 
+
 ###Step 2 : Run TeraGen experiment to generate data
 --------------
 Definition file: [teragen.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/teragen.yml)
 
-###Configuration changes required *
+####Configuration changes required *
 
 You should add the public IP address of your master node in configuration for ```ips:```
 ```
@@ -63,6 +64,8 @@ attrs:
 ```
 ``` records: '2000000000'``` generated 200GB of data.
 
+
+
 ###Step 3 : Run TeraSort experiment
 --------------
 TeraSort benchmark for Spark and Flink shoule be run seperately. The public IP address of the master node shoud be configured in ```ips:``` section similarly as for TeraGen experiment
@@ -74,6 +77,7 @@ Definition file: [terasort-spark.yml](https://github.com/karamel-lab/batch-proce
 ####Flink
 
 Definition file: [terasort-flink.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/terasort-flink.yml)
+
 
 
 
