@@ -1,4 +1,4 @@
-# batch-processing-comparison
+# Batch processing comparison - Apache Spark vs. Apache Flink
 This project includes all the Karamel definition files which are required to do the batch processing comparison between Apache Spark vs Apache Flink in public cloud. This project used TeraSort for benchmarking the systems and TeraGen has been used to generate the data. You can [feed each Karamel definition file](https://www.youtube.com/watch?v=tCIA8_2dR14) to Karamel to execute its task.
 
 ###Step 1 : Deploy the cluster in cloud
