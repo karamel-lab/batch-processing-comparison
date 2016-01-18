@@ -1,0 +1,89 @@
+name: AllInOneWithMemory
+ec2:
+  region: us-west-2
+  type: m3.xlarge
+cookbooks:
+  hadoop:
+    branch: master
+    github: karamel-lab/apache-hadoop-chef
+  spark:
+    branch: master
+    github: ashansa/spark-chef
+  flink:
+    branch: master
+    github: ashansa/flink-chef
+attrs:
+  hadoop:
+    mr:
+      user: ubuntu
+    yarn:
+      user: ubuntu
+  hdfs:
+    user: ubuntu
+  spark:
+    driver_memory: 8192m
+    executor_memory: 100g
+    user: ubuntu
+  flink:
+    jobmanager:
+      heap_mbs: '8192'
+    user: ubuntu
+    taskmanager:
+      heap_mbs: '102400'
+groups:
+  datanodes:
+    size: 2
+    ec2:
+      ami: ami-07bfae66
+      region: us-west-2
+      type: i2.4xlarge
+      price: 0.5
+    attrs:
+      hadoop:
+        mr:
+          user: ubuntu
+        yarn:
+          user: ubuntu
+      hdfs:
+        user: ubuntu
+      spark:
+        user: ubuntu
+      flink:
+        jobmanager:
+          heap_mbs: '8192'
+        user: ubuntu
+        taskmanager:
+          heap_mbs: '102400'
+    recipes:
+    - spark::worker
+    - hadoop::dn
+    - hadoop::nm
+    - flink::taskmanager
+  namenodes:
+    size: 1
+    ec2:
+      ami: ami-07bfae66
+      region: us-west-2
+      type: m3.xlarge
+      price: 0.15
+    attrs:
+      hadoop:
+        mr:
+          user: ubuntu
+        yarn:
+          user: ubuntu
+      hdfs:
+        user: ubuntu
+      spark:
+        user: ubuntu
+      flink:
+        jobmanager:
+          heap_mbs: '8192'
+        user: ubuntu
+        taskmanager:
+          heap_mbs: '102400'
+    recipes:
+    - flink::jobmanager
+    - hadoop::nn
+    - spark::master
+    - hadoop::rm

@@ -1,0 +1,26 @@
+name: TeraGen
+baremetal:
+  ips: [
+    ]
+  sudoPassword: ''
+  username: ubuntu
+cookbooks:
+  teragen:
+    branch: master
+    github: karamel-lab/teragen
+attrs:
+  teragen:
+    records: '2000000000'
+    group: ubuntu
+    user: ubuntu
+groups:
+  namenode:
+    size: 1
+    baremetal:
+      ips:
+      - 54.203.56.51
+      sudoPassword: ''
+    attrs: {
+      }
+    recipes:
+    - teragen::experiment

@@ -1,0 +1,25 @@
+name: TeraSortFlink
+baremetal:
+  ips: [
+    ]
+  sudoPassword: ''
+  username: ubuntu
+cookbooks:
+  terasort:
+    branch: master
+    github: karamel-lab/flink_terasort
+attrs:
+  terasort:
+    group: ubuntu
+    user: ubuntu
+groups:
+  namenode:
+    size: 1
+    baremetal:
+      ips:
+      - 54.203.56.51
+      sudoPassword: ''
+    attrs: {
+      }
+    recipes:
+    - terasort::experiment
