@@ -1,4 +1,4 @@
-name: AllInOneWithMemory
+name: HadoopSparkFlinkCluster
 ec2:
   region: us-west-2
   type: m3.xlarge
@@ -38,22 +38,6 @@ groups:
       region: us-west-2
       type: i2.4xlarge
       price: 0.5
-    attrs:
-      hadoop:
-        mr:
-          user: ubuntu
-        yarn:
-          user: ubuntu
-      hdfs:
-        user: ubuntu
-      spark:
-        user: ubuntu
-      flink:
-        jobmanager:
-          heap_mbs: '8192'
-        user: ubuntu
-        taskmanager:
-          heap_mbs: '102400'
     recipes:
     - spark::worker
     - hadoop::dn
@@ -66,22 +50,6 @@ groups:
       region: us-west-2
       type: m3.xlarge
       price: 0.15
-    attrs:
-      hadoop:
-        mr:
-          user: ubuntu
-        yarn:
-          user: ubuntu
-      hdfs:
-        user: ubuntu
-      spark:
-        user: ubuntu
-      flink:
-        jobmanager:
-          heap_mbs: '8192'
-        user: ubuntu
-        taskmanager:
-          heap_mbs: '102400'
     recipes:
     - flink::jobmanager
     - hadoop::nn
