@@ -76,11 +76,26 @@ TeraSort benchmark for Spark and Flink shoule be run seperately. The public IP a
 
 Definition file: [terasort-spark.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/terasort-spark.yml)
 
+
+####Configuration changes required *
+
+You should add the public IP address of your master node in configuration for ```ips:```
+```
+ips:
+      - 54.203.56.51
+```
+
 ####Flink
 
 Definition file: [terasort-flink.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/terasort-flink.yml)
 
+####Configuration changes required *
 
+You should add the public IP address of your master node in configuration for ```ips:```
+```
+ips:
+      - 54.203.56.51
+```
 
 
 You can use the [collectl-monitoring tool](https://github.com/shelan/collectl-monitoring) to monitor the system level performance of these big data engines while executing the TeraSort experiment.
