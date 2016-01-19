@@ -112,8 +112,8 @@ ips:
       - 54.203.56.51
 ```
 
-
-**To complete step 2 and 3 seamlessly, Karamel should provide support for adding both public and private IPs in the Karamel definition file fore bare-metal. This feature will be soon supported by Karamel. 
-
-
 You can use the [collectl-monitoring tool](https://github.com/shelan/collectl-monitoring) to monitor the system level performance of these big data engines while executing the TeraSort experiment. Collectl-monitor should be started before you are running the experiment and should be stopped once the experiment is over. You can visit [here](https://github.com/shelan/collectl-monitoring#example-scenario) for an example scenario described for a quick look.
+
+
+#### Future enhancements
+**To complete step 2 and 3 seamlessly, Karamel should provide support for adding both public and private IPs in the Karamel definition file fore bare-metal. This feature will be soon supported by Karamel. 
