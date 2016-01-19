@@ -55,7 +55,7 @@ For a fair comparison, you can allocate the same amount of memory for Spark driv
 
 
 
-###Step 2 : Run TeraGen experiment to generate data
+###Step 2 : Run TeraGen experiment to generate data **
 --------------
 Definition file: [teragen.yml](https://github.com/karamel-lab/batch-processing-comparison/blob/master/teragen.yml)
 
@@ -83,7 +83,7 @@ attrs:
 
 
 
-###Step 3 : Run TeraSort experiment
+###Step 3 : Run TeraSort experiment **
 --------------
 TeraSort experiment runs the benchmarking algorithm for the performance comparison of the systems. TeraSort benchmark for Spark and Flink shoule be run seperately. The public IP address of the master node shoud be configured in ```ips:``` section similarly as for TeraGen experiment
 
@@ -111,6 +111,9 @@ You should add the public IP address of your master node in configuration for ``
 ips:
       - 54.203.56.51
 ```
+
+
+**To complete step 2 and 3 seamlessly, Karamel should provide support for adding both public and private IPs in the Karamel definition file fore bare-metal. This feature will be soon supported by Karamel. 
 
 
 You can use the [collectl-monitoring tool](https://github.com/shelan/collectl-monitoring) to monitor the system level performance of these big data engines while executing the TeraSort experiment.
